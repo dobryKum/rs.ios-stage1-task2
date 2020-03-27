@@ -26,9 +26,9 @@
         NSNumber *newMinutes = [NSNumber numberWithInt:60 - [minutesNumber intValue]];
         NSNumber *newHours = [NSNumber numberWithInt:[hoursNumber intValue] + 1];
         if ([newMinutes intValue] == 15) {
-            return [NSString stringWithFormat:@"quarter to %@" ,[self wordFromNumber:newHours]];
+            return [NSString stringWithFormat:@"%@ to %@" ,[self wordFromNumber:newMinutes], [self wordFromNumber:newHours]];
         } else {
-            return [NSString stringWithFormat:@"%@ minutes to %@", [self wordFromNumber:newMinutes],[self wordFromNumber:newHours]];
+            return [NSString stringWithFormat:@"%@ minutes to %@", [self wordFromNumber:newMinutes], [self wordFromNumber:newHours]];
         }
     }
     return @"";
@@ -50,7 +50,7 @@
         @12:@"twelve",
         @13:@"thirteen",
         @14:@"fourteen",
-        @15:@"quater",
+        @15:@"quarter",
         @16:@"sixteen",
         @17:@"seventeen",
         @18:@"eighteen",
